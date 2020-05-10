@@ -125,26 +125,3 @@ const questions = [
 
 
 
-// function to write README file
-const writeFile = data => {
-    fs.writeFile('README.md', data, err => {
-        if (err) {
-            console.log(err);
-            return;
-        } else {
-            console.log("README created!")
-        }
-    })
-}; 
-
-// function call to initialize program
-questions()
-.then(answers => {
-    return generatePage(answers);
-})
-.then(data => {
-    return writeFile(data);
-})
-.catch(err => {
-    console.log(err)
-})
