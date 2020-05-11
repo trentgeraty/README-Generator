@@ -125,3 +125,15 @@ const questions = [
 
 
 
+const fs = require('fs')
+
+fs.writeFile('README.md'(err) => {
+	
+	if (err) {
+		console.error(err)
+		return
+	}
+
+
+	console.log('wrote to file successfully')
+})
