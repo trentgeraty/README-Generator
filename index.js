@@ -123,17 +123,25 @@ const questions = [
     }
 ];
 
+// function to write README file
+const writeFile = data => {
+    fs.writeFile('README.md', data, err => {
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log("README created!")
+        }
+    })
+}; 
 
-
-const fs = require('fs')
-
-fs.writeFile('README.md'(err) => {
-	
-	if (err) {
-		console.error(err)
-		return
-	}
-
-
-	console.log('wrote to file successfully')
-})
+function init() {
+    inquirer.prompt(
+      questions
+    )
+    .then(answers => {
+     const structure = generateMarkdown(answers)
+     writeFile(structure)
+    })
+}
+init(); 
