@@ -21,21 +21,19 @@ var generateMarkdown = data => {
   ## Usage 
   ${data.usage}
  
-  ## Credits
-  ${data.credits}
- 
   ## License 
   ${data.license}
  
   ## Contributing
-  ${data.contrubuting}
+  ${data.contribution}
  
   ## Test
-  ${data.tests}
+  ${data.test}
  
   ## Questions
-  If you have any questions about this projects, please contact me directly at 
+  If you have any questions about this projects, please contact me directly at trentgeraty@gmail.com
 `;
 }
 
 module.exports = generateMarkdown;
+
